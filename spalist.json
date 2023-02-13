@@ -1,0 +1,36 @@
+{
+  "service": "Massages",
+  "qty": 25,
+  "price": "140",
+  "info": "Offering different types of massages such as Swedish, deep tissue, hot stone, aromatherapy, and sports massage."
+}
+{
+  "service": "Facials",
+  "qty": 25,
+  "price": "50",
+  "info": "Offering different types of facials such as basic, deep cleaning, anti-aging, and revitalizing"
+}
+{
+  "service": "Body Treatments",
+  "qty": 25,
+  "price": "80",
+  "info": "Offering different types of body treatments such as scrubs, wraps, and hydrotherapy"
+}
+{
+  "service": "Manicures and Pedicures",
+  "qty": 25,
+  "price": "55",
+  "info": "Offering a variety of nail services such as basic, spa, and gel."
+}
+{
+  "service": "Waxes",
+  "qty": 25,
+  "price": "40",
+  "info": "Offering different types of waxing services such as leg, arm, bikini, and facial waxing."
+}
+{
+  "service": "Yoga/Meditation",
+  "qty": 25,
+  "price": "120",
+  "info": "Offering yoga or meditation classes to help with relaxation and rejuvenation of mind and body."
+}
