@@ -36,3 +36,108 @@
     transform: rotate(360deg);
   }
 }
+
+/* My custom styles */
+.Spa-nav {
+  min-height: 5vh;
+  background-color: #9fd5b5;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.Spa-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 0;
+  justify-content: space-between;
+  align-items: inherit;
+}
+
+.Spa-nav ul li {
+  color: white;
+}
+
+.Cart-section {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.Item-name {
+  font-weight: 500;
+}
+
+.Item-img {
+  height: 15vmin;
+  width: 15vmin;
+  margin-right: 40px;
+}
+
+.Product-items .List-items {
+  padding-left: 50px !important;
+}
+
+.Add-Rm-Btns {
+  position: relative;
+  top: 10px;
+}
+
+.Item-contents {
+  display: flex;
+  align-items: center;
+}
+
+.Quantity-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.Quantity-box {
+  border: #e4e4e4 2.5px solid;
+  width: 45px;
+  padding: 10px 15px;
+  margin: 0 10px;
+}
+
+.Nav-links {
+  text-decoration: none;
+  color: white;
+}
+
+.Nav-links:hover {
+  color: white;
+}
+
+.Cart-items .List-items {
+  padding-left: 30px !important;
+}
+
+.Cart-text {
+  width: 90px;
+}
+
+.R-icon {
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
+}
+
+.card-text form {
+  width: 250px;
+}
+
+/* sortPrice.js */
+.Sort-div {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.Sort-div p {
+  margin: 0;
+}
+
+.Sort-div select {
+  height: fit-content;
+  margin-left: 15px;
+}
