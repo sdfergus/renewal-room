@@ -38,10 +38,15 @@
 }
 
 /* My custom styles */
+/* *********************** NAV SECTION ************* */
+.Spa-logo {
+  width: 80px;
+  padding: 0;
+}
+
 .Spa-nav {
   min-height: 5vh;
-  background-color: #9fd5b5;
-  padding: 10px 20px;
+  background-color: #fff;
   align-items: center;
 }
 
@@ -50,11 +55,38 @@
   list-style-type: none;
   margin-bottom: 0;
   justify-content: space-between;
-  align-items: inherit;
+  /* font-weight: 400; */
 }
 
 .Spa-nav ul li {
-  color: white;
+  color: #000;
+  font-weight: 400;
+}
+
+.Nav-center,
+.Nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav-center {
+  position: relative;
+  left: 10%;
+}
+
+.Nav-center li,
+.Nav-right li {
+  padding: 10px 25px;
+}
+
+.Nav-center h6,
+.Cart-text {
+  font-weight: 400;
+}
+
+.Cart-text {
+  width: 90px;
 }
 
 .Cart-section {
@@ -101,7 +133,11 @@
 
 .Nav-links {
   text-decoration: none;
-  color: white;
+  color: inherit;
+}
+
+.Nav-links h6 {
+  margin-bottom: 0;
 }
 
 .Nav-links:hover {
@@ -110,16 +146,6 @@
 
 .Cart-items .List-items {
   padding-left: 30px !important;
-}
-
-.Cart-text {
-  width: 90px;
-}
-
-.R-icon {
-  position: relative;
-  top: 10px;
-  margin-left: 10px;
 }
 
 .card-text form {
@@ -140,4 +166,52 @@
 .Sort-div select {
   height: fit-content;
   margin-left: 15px;
+}
+
+header {
+  height: 90vh;
+}
+
+/* *********************** HERO SECTION ************* */
+.Hero-img {
+  background: no-repeat #f7cc70 url(/public/hero-img.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 3em;
+  min-height: 600px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  margin: 5.5% auto;
+  align-content: space-between;
+  row-gap: 25px;
+}
+
+.hero-text h1 {
+  color: white;
+  font-size: 7em;
+  font-weight: 400;
+}
+
+.hero-text p {
+  /* margin-bottom: 30px; */
+}
+
+.hero-text button {
+  background-color: #f7cc70;
+  /* margin-top: 10px; */
+  padding: 10px 25px;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+
+.hero-text button:hover {
+  border: 2px solid #f7cc70;
+  color: #fff;
 }
