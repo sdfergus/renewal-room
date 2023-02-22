@@ -3,10 +3,11 @@ import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DisplayServices from './displayServices';
+// import DisplayServices from './displayServices';
 import Cart from './cart';
 import FbLogin from "./fbLogin";
-import DisplayHero from "./DisplayHero";
+// import DisplayHero from "./DisplayHero";
+// import DisplayBody from "./DisplayBody";
 
 function Nav( props ) {
   console.log( 'CartTotal: ', props.cartTotal );
@@ -74,13 +75,19 @@ function Nav( props ) {
               cartItems={props.displayCartItems}
             />
           } />
-        <Route
+        {/* <Route
           path="/"
           element={
             <DisplayHero />
           } />
 
         <Route
+          path="/"
+          element={
+            <DisplayBody />
+          } /> */}
+
+        {/* <Route
           path="/"
           element={
             <DisplayServices
@@ -91,7 +98,7 @@ function Nav( props ) {
               selectOption={props.selectOption}
             />
           }
-        />
+        /> */}
         <Route
           path="/fbLogin"
           element={

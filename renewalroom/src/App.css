@@ -38,7 +38,11 @@
 }
 
 /* My custom styles */
-/* *********************** NAV SECTION ************* */
+/* ****************** HOME- NAV SECTION ************* */
+html {
+  scroll-behavior: smooth;
+}
+
 .Spa-logo {
   width: 80px;
   padding: 0;
@@ -136,6 +140,10 @@
   color: inherit;
 }
 
+.Nav-links:hover {
+  color: #f7cc70 !important;
+}
+
 .Nav-links h6 {
   margin-bottom: 0;
 }
@@ -168,13 +176,13 @@
   margin-left: 15px;
 }
 
+/* *********************** HERO SECTION ************* */
 header {
-  height: 90vh;
+  height: 93vh;
 }
 
-/* *********************** HERO SECTION ************* */
 .Hero-img {
-  background: no-repeat #f7cc70 url(/public/hero-img.jpg);
+  background: no-repeat #261b14 url(/public/hero-img.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 3em;
@@ -185,33 +193,61 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  /* width: 50%; */
   align-items: center;
   text-align: center;
-  margin: 5.5% auto;
+  margin: 6% auto;
   align-content: space-between;
-  row-gap: 25px;
+  row-gap: 40px;
 }
 
 .hero-text h1 {
   color: white;
   font-size: 7em;
   font-weight: 400;
+  width: 50%;
 }
 
 .hero-text p {
-  /* margin-bottom: 30px; */
+  font-size: large;
+  width: 60%;
+  margin-top: 20px;
 }
 
 .hero-text button {
   background-color: #f7cc70;
-  /* margin-top: 10px; */
-  padding: 10px 25px;
-  font-weight: 500;
+  padding: 10px 50px;
+  font-weight: 700;
   border: 2px solid transparent;
 }
 
 .hero-text button:hover {
   border: 2px solid #f7cc70;
   color: #fff;
+}
+
+/* ******************** HOME BODY *************** */
+body {
+  height: fit-content;
+}
+
+body .container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+body .container .row {
+  margin-bottom: 40px;
+}
+
+body .container .row .col-sm img {
+  height: 287px;
+}
+
+#home-body {
+}
+
+/* ******************** FOOTER *************** */
+footer {
+  background-color: #261b14;
 }
