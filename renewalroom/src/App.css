@@ -182,7 +182,7 @@ header {
 }
 
 .Hero-img {
-  background: no-repeat #261b14 url(/public/hero-img.jpg);
+  background: no-repeat #f7cc70 url(/public/hero-img.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 3em;
