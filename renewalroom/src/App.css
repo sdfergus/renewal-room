@@ -221,7 +221,8 @@ header {
   border: 2px solid transparent;
 }
 
-.hero-text button:hover {
+.hero-text button:hover,
+#footer-btn:hover {
   border: 2px solid #f7cc70;
   color: #fff;
 }
@@ -245,6 +246,20 @@ body .container .row .col-sm img {
 }
 
 /* ******************** FOOTER *************** */
-footer {
+section .info-content {
+  background-color: #a6998f;
+}
+
+footer .copyright {
   background-color: #261b14;
+}
+
+#footer-btn {
+  background-color: #f7cc70;
+  border: 2px solid transparent;
+  color: #000;
+}
+
+#footer-btn:hover {
+  background-color: transparent;
 }
