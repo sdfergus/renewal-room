@@ -2,9 +2,6 @@ import './App.css';
 import React, { Component } from "react";
 import { ServicesData } from './services';
 import Nav from './navbar';
-import DisplayHero from "./DisplayHero";
-import DisplayBody from "./DisplayBody";
-import DisplayFooter from './DisplayFooter';
 
 class App extends Component {
 
@@ -48,15 +45,10 @@ class App extends Component {
           cartTotal={this.handleCartTotal()}
           // handleSelect={this.handleSelect}
           selectOption={this.state.selectOption}
-        />
-        <DisplayHero
+
           scroll={this.scroll}
           ctaRef={this.ctaRef}
         />
-        <DisplayBody
-          ctaRef={this.ctaRef}
-        />
-        <DisplayFooter />
       </div>
     );
   }

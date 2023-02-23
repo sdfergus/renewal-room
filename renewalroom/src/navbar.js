@@ -6,9 +6,9 @@ import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import DisplayServices from './displayServices';
 import Cart from './cart';
 import FbLogin from "./fbLogin";
-// import DisplayHero from "./DisplayHero";
-// import DisplayBody from "./DisplayBody";
-// import DisplayFooter from "./DisplayFooter";
+import DisplayHero from "./DisplayHero";
+import DisplayBody from "./DisplayBody";
+import DisplayFooter from "./DisplayFooter";
 
 function Nav( props ) {
   console.log( 'CartTotal: ', props.cartTotal );
@@ -69,6 +69,22 @@ function Nav( props ) {
       </nav>
 
       <Routes>
+
+        <Route
+          path='/'
+          element={[
+            <DisplayHero
+              scroll={props.scroll}
+              ctaRef={props.ctaRef}
+            />,
+            <DisplayBody
+              ctaRef={props.ctaRef}
+            />,
+            <DisplayFooter />
+          ]
+          }
+        />
+
         <Route
           path="/cart"
           element={
@@ -76,17 +92,7 @@ function Nav( props ) {
               cartItems={props.displayCartItems}
             />
           } />
-        {/* <Route
-          path="/"
-          element={
-            <DisplayHero />
-          } />
-
-        <Route
-          path="/"
-          element={
-            <DisplayBody />
-          } /> */}
+        {/*
 
         {/* <Route
           path="/"
