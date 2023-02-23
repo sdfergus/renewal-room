@@ -182,7 +182,7 @@ header {
 }
 
 .Hero-img {
-  background: no-repeat #f7cc70 url(/public/hero-img.jpg);
+  background: no-repeat #f7cc70 url(/public/images/hero-img.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 3em;
@@ -234,7 +234,7 @@ body {
 
 body .container {
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 body .container .row {
@@ -252,6 +252,11 @@ section .info-content {
 
 footer .copyright {
   background-color: #261b14;
+}
+
+footer .row {
+  display: flex;
+  text-align: left;
 }
 
 #footer-btn {

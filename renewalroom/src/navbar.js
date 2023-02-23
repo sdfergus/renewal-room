@@ -8,6 +8,7 @@ import Cart from './cart';
 import FbLogin from "./fbLogin";
 // import DisplayHero from "./DisplayHero";
 // import DisplayBody from "./DisplayBody";
+// import DisplayFooter from "./DisplayFooter";
 
 function Nav( props ) {
   console.log( 'CartTotal: ', props.cartTotal );
@@ -27,24 +28,24 @@ function Nav( props ) {
               </Link>
             </li>
             <li>
-              <Link to="/" className="Nav-links">
+              <Link to="/about" className="Nav-links">
                 <h6>About Us</h6>
               </Link>
             </li>
             <li>
-              <Link to="/" className="Nav-links">
+              <Link to="/team" className="Nav-links">
                 <h6>Meet our team</h6>
               </Link>
             </li>
             <li>
-              <Link to="/" className="Nav-links">
+              <Link to="/contact" className="Nav-links">
                 <h6>Contact Us</h6>
               </Link>
             </li>
           </div>
           <div className="Nav-right">
             <li>
-              <Link to="/" className="Nav-links">
+              <Link to="/login" className="Nav-links">
                 <span className='Cart-section'>
                   <FontAwesomeIcon
                     icon={faUser}
