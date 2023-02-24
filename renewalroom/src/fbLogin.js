@@ -8,16 +8,16 @@ function FbLogin() {
   const [ data, setData ] = useState( {} ); //set up fb data
   const [ picture, setPicture ] = useState( '' ); //set up fb profile image
 
-  const fbResponse = ( response ) => {
-    console.log( response );
-    setData( response );
-    setPicture( response.picture.data.url );
-    if ( response.accessToken ) {
-      setLogin( true );
-    } else {
-      setLogin( false );
-    }
-  }
+  // const fbResponse = ( response ) => {
+  //   console.log( response );
+  //   setData( response );
+  //   setPicture( response.picture.data.url );
+  //   if ( response.accessToken ) {
+  //     setLogin( true );
+  //   } else {
+  //     setLogin( false );
+  //   }
+  // }
 
   return (
     <div className='container'>
