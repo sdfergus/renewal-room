@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from "react";
 import { ServicesData } from './services';
 import Nav from './navbar';
+import { TeamData } from './team';
 
 class App extends Component {
 
@@ -9,7 +10,8 @@ class App extends Component {
     super( props );
     this.state = {
       selectOption: 'Normal',
-      ServicesList: ServicesData
+      ServicesList: ServicesData,
+      TeamList: TeamData
     }
 
     this.ctaRef = React.createRef();
@@ -38,6 +40,7 @@ class App extends Component {
     return (
       <div>
         <Nav
+          teamInfo={this.state.TeamList}
           serviceItems={this.state.ServicesList}
           // addItem={this.handleAddedItem}
           // removeItem={this.handleRemovedItem}
@@ -45,7 +48,6 @@ class App extends Component {
           cartTotal={this.handleCartTotal()}
           // handleSelect={this.handleSelect}
           selectOption={this.state.selectOption}
-
           scroll={this.scroll}
           ctaRef={this.ctaRef}
         />
