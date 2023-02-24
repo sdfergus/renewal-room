@@ -1,201 +1,62 @@
-export const TeamData = {
-  Allison: {
-    id: 1,
-    img: 'products/cologne.jpg',
-    bio: 'Unisex Cologne Image',
-    services: {
-      maniPedi: {
-        desc: {},
-        schedule: [
-          'Mondays @ 9am',
-          'Wednesdays @ 12pm'
-        ]
-      },
-      meditation: {
-        desc: {},
-        schedule: [
-          'Tuesdays @ 9am',
-          'Thursdays @ 12pm',
-          'Saturdays @ 3pm'
-        ]
-      }
-    },
-    ratings: "5/5",
-    reviews: [ "Her Manicures are the absolute best! 10/10 would recommend! - Stacy A", "Let's talk about her meditation sessions! I sleep like a baby every time! - Jacob M" ]
-  },
-  Brian: {
-    id: 2,
-    img: 'products/iwatch.jpg',
-    bio: 'Bio details',
-    services: {
-      massages: {
-        desc: {},
-        schedule: [
-          'Mondays @ 7am',
-          'Tuesdays @ 9pm',
-          'Wednesdays @ 8pm',
-          'Thursdays @ 10pm',
-          'Fridays @ 7pm',
-          'Saturdays @ 12pm'
-        ]
-      }
-    },
-    ratings: "4.8/5",
-    reviews: [ "Review1, Review 2" ]
-  },
-  John: {
-    id: 3,
-    img: 'products/mug.jpg',
-    bio: 'Bio details',
-    services: {
-      yoga: {
-        desc: {},
-        schedule: [
-          'Mondays @ 9am',
-          'Tuesdays @ 12pm',
-          'Wednesdays @ 11am',
-          'Thursdays @ 10am',
-          'Fridays @ 7pm',
-          'Saturdays @ 10am'
-        ]
-      },
-      meditation: {
-        desc: {},
-        schedule: [
-          'Mondays @ 7am',
-          'Tuesdays @ 3pm',
-          'Wednesdays @ 7pm',
-          'Thursdays @ 3pm',
-          'Fridays @ 3pm',
-          'Saturdays @ 12pm'
-        ]
-      }
-    },
-    ratings: "4.5/5",
-    reviews: [ "Review1, Review 2" ]
-  },
-  Kristen: {
-    id: 4,
-    img: 'products/wallet.jpg',
-    bio: 'Bio details',
-    services: {
-      facials: {
-        desc: {},
-        schedule: [
-          'Mondays @ 8am',
-          'Tuesdays @ 3pm',
-          'Wednesdays @ 12pm',
-          'Thursdays @ 11pm',
-          'Fridays @ 6pm',
-          'Saturdays @ 7pm'
-        ]
-      },
-      waxes: {
-        desc: {},
-        schedule: [
-          'Mondays @ 12pm',
-          'Tuesdays @ 9am',
-          'Wednesdays @ 8am',
-          'Thursdays @ 9am',
-          'Fridays @ 12pm',
-          'Saturdays @ 8am'
-        ]
-      }
-    },
-    ratings: "5/5",
-    reviews: [ "Review1, Review 2" ]
-  },
-  Matthew: {
-    id: 5,
-    img: 'products/wallet.jpg',
-    bio: 'Bio details',
-    services: {
-      massages: {
-        desc: {},
-        schedule: [
-          'Mondays @ 8am',
-          'Tuesdays @ 12pm',
-          'Wednesdays @ 6pm',
-          'Thursdays @ 1pm',
-          'Fridays @ 4pm',
-          'Saturdays @ 9am'
-        ]
-      },
-      meditation: {
-        desc: {},
-        schedule: [
-          'Mondays @ 12pm',
-          'Tuesdays @ 4pm',
-          'Wednesdays @ 8am',
-          'Thursdays @ 6pm',
-          'Fridays @ 2pm',
-          'Saturdays @ 12pm'
-        ]
-      }
-    },
-    ratings: "5/5",
-    reviews: [ "Review1, Review 2" ]
-  },
-  Nicole: {
-    id: 6,
-    img: 'products/wallet.jpg',
-    bio: 'Bio details',
-    services: {
-      facials: {
-        desc: {},
-        schedule: [
-          'Mondays @ 8am',
-          'Tuesdays @ 7pm',
-          'Wednesdays @ 3pm',
-          'Thursdays @ 12pm',
-          'Fridays @ 2pm',
-          'Saturdays @ 10am'
-        ]
-      },
-      waxes: {
-        desc: {},
-        schedule: [
-          'Mondays @ 10am',
-          'Tuesdays @ 3pm',
-          'Wednesdays @ 12pm',
-          'Thursdays @ 1pm',
-          'Fridays @ 9am',
-          'Saturdays @ 8am'
-        ]
-      }
-    },
-    ratings: "4.9/5",
-    reviews: [ "Review1, Review 2" ]
-  },
-  Rachael: {
-    id: 7,
-    img: 'products/wallet.jpg',
-    bio: 'Bio details',
-    services: {
-      yoga: {
-        desc: {},
-        schedule: [
-          'Mondays @ 7am',
-          'Tuesdays @ 4pm',
-          'Wednesdays @ 8am',
-          'Thursdays @ 1pm',
-          'Fridays @ 8am',
-          'Saturdays @ 9am'
-        ]
-      },
-      maniPedi: {
-        desc: {},
-        schedule: [
-          'Mondays @ 9am',
-          'Tuesdays @ 12pm',
-          'Wednesdays @ 10am',
-          'Thursdays @ 3pm',
-          'Fridays @ 10am',
-          'Saturdays @ 12pm'
-        ]
-      }
-    },
-    ratings: "4/5",
-    reviews: [ "Review1, Review 2" ]
-  }
+import React from "react";
+import { ListGroup, ListGroupItem } from "reactstrap";
+import "./App.css";
+
+function Team( props ) {
+  console.log( 'LIST IN TEAM: ', Object.keys( props.teamList ).map( ( member, id ) => ( Object.values( props.teamList[ member ].services )[ 0 ].name ) ) );
+  return (
+    <div className="Team-list p-5 ">
+      <h1 className="text-center mb-2">We're happy to serve you!</h1>
+      <p className="container mb-2">At The Renewal Room, we pride ourselves on having a team of highly trained and experienced professionals who are dedicated to providing you with the best possible spa experience. Our team consists of skilled therapists who are passionate about what they do and committed to helping you achieve the ultimate in relaxation and rejuvenation.
+        <br />
+        <br />
+        Each member of our team has undergone extensive training and has years of experience in their field, ensuring that you receive the highest level of service and attention. From our expert massage therapists to our skilled estheticians, we have assembled a team of professionals who are dedicated to helping you find your inner peace and achieve a renewed sense of well-being.
+        <br />
+        <br />
+        We believe that a great spa experience begins with a great team, and we are proud to have assembled such a talented group of individuals. Book an appointment with us today and experience the expertise of our team for yourself. We can't wait to help you unwind, relax, and renew!</p>
+      <ListGroup className="container">
+        {Object.keys( props.teamList ).map( ( member ) => (
+          <ListGroupItem
+            className='List-items py-3 shadow-sm p-3 mb-5 bg-white rounded'
+            key={props.teamList[ member ].id}
+          >
+            <div className='Item-contents'>
+              <img
+                src={props.teamList[ member ].img}
+                alt={props.teamList[ member ].alt}
+                className='Member-img'
+              />
+              <span className='m-5 align-self-start'>
+                <div className='Member-name'>
+                  <h2>{props.teamList[ member ].name} </h2><em>
+                    <span className="specialty">Specialty &#8212;
+                      {Object.values( props.teamList[ member ].services ).length > 1
+                        ?
+                        ` ${ Object.values( props.teamList[ member ].services )[ 0 ].name } and ${ Object.values( props.teamList[ member ].services )[ 1 ].name } `
+                        :
+                        Object.values( props.teamList[ member ].services )[ 0 ].name}
+                    </span>
+                  </em>
+                  <br />
+                  {props.teamList[ member ].bio}
+                  <br />
+                  <br />
+                  Rating: {props.teamList[ member ].ratings}
+                  <br />
+                  <br />
+                  <em>
+                    {props.teamList[ member ].reviews[ 0 ]}
+                  </em>
+                  <br />
+                </div>
+              </span>
+            </div>
+          </ListGroupItem>
+        ) )}
+      </ListGroup>
+    </div>
+
+  )
 }
+
+export default Team;

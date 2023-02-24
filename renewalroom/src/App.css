@@ -99,7 +99,8 @@ html {
   padding-right: 30px;
 }
 
-.Item-name {
+.Item-name,
+.Member-name {
   font-weight: 500;
 }
 
@@ -267,4 +268,32 @@ footer .row {
 
 #footer-btn:hover {
   background-color: transparent;
+}
+
+/* ******************** TEAM.js *************** */
+.Team-list {
+  background-color: #f7cc70;
+}
+
+.Team-list .List-items {
+  padding-left: 30px !important;
+}
+
+.Member-img {
+  width: 20vmax;
+  height: 20vmax;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Member-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.specialty {
+  color: tomato;
 }
