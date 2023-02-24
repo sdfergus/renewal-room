@@ -9,12 +9,13 @@ import FbLogin from "./fbLogin";
 import DisplayHero from "./DisplayHero";
 import DisplayBody from "./DisplayBody";
 import DisplayFooter from "./DisplayFooter";
+import Team from "./team";
 
 function Nav( props ) {
   console.log( 'CartTotal: ', props.cartTotal );
   return (
     <Router>
-      <nav className='Spa-nav'>
+      <nav className='Spa-nav border-bottom'>
         <ul>
           <li>
             <Link to="/" className="Nav-links">
@@ -92,6 +93,16 @@ function Nav( props ) {
               cartItems={props.displayCartItems}
             />
           } />
+
+        <Route
+          path="/team"
+          element={
+            <Team
+              teamList={props.teamList}
+            />
+          }
+        />
+
         {/*
 
         {/* <Route
