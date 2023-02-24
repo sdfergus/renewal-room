@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from 'react-facebook-login';
 import { Card } from 'react-bootstrap';
 import './App.css';
 
@@ -8,16 +8,16 @@ function FbLogin() {
   const [ data, setData ] = useState( {} ); //set up fb data
   const [ picture, setPicture ] = useState( '' ); //set up fb profile image
 
-  // const fbResponse = ( response ) => {
-  //   console.log( response );
-  //   setData( response );
-  //   setPicture( response.picture.data.url );
-  //   if ( response.accessToken ) {
-  //     setLogin( true );
-  //   } else {
-  //     setLogin( false );
-  //   }
-  // }
+  const fbResponse = ( response ) => {
+    console.log( response );
+    setData( response );
+    setPicture( response.picture.data.url );
+    if ( response.accessToken ) {
+      setLogin( true );
+    } else {
+      setLogin( false );
+    }
+  }
 
   return (
     <div className='container'>
@@ -41,14 +41,14 @@ function FbLogin() {
                 {/* Login Form */}
                 <LoginForm />
                 {/* FB Login Button */}
-                {/* <FacebookLogin
+                <FacebookLogin
                   appId='1401222237082306'
                   autoLoad={false}
                   fields='name,email,picture'
                   scope='public_profile,user_friends'
                   callback={fbResponse}
                   icon="fa-facebook"
-                /> */}
+                />
               </React.Fragment>
             }
 
