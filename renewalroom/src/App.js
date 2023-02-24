@@ -2,7 +2,7 @@ import './App.css';
 import React, { Component } from "react";
 import { ServicesData } from './services';
 import Nav from './navbar';
-import { TeamData } from './team';
+import { TeamData } from './teamData';
 
 class App extends Component {
 
@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div>
         <Nav
-          teamInfo={this.state.TeamList}
+          teamList={this.state.TeamList}
           serviceItems={this.state.ServicesList}
           // addItem={this.handleAddedItem}
           // removeItem={this.handleRemovedItem}
