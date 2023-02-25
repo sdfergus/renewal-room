@@ -10,11 +10,11 @@ export const ServicesData = [
     offerings: 'Swedish, Deep Tissue, Hot Stone, Aromatherapy, and Sports Massage',
     prices: [
       {
-        swedish60: '60-minute Swedish massage',
+        swedish60: '60-minute swedish massage',
         price: 80
       },
       {
-        swedish90: '90-minute Swedish massage',
+        swedish90: '90-minute swedish massage',
         price: 110
       },
       {
@@ -62,19 +62,19 @@ export const ServicesData = [
     offerings: 'Basic, Deep Cleaning, Anti-aging, and Revitalizing',
     prices: [
       {
-        basic: '90-minute Basic facial',
+        basic: '90-minute basic facial',
         price: 100
       },
       {
-        deepClean: '90-minute Deep cleaning facial',
+        deepClean: '90-minute deep cleaning facial',
         price: 130
       },
       {
-        antiAging: '90-minute Anti-aging facial',
+        antiAging: '90-minute anti-aging facial',
         price: 200
       },
       {
-        revitalizing: '90-minute Revitalizing facial',
+        revitalizing: '90-minute revitalizing facial',
         price: 150
       }
     ]
@@ -90,15 +90,15 @@ export const ServicesData = [
     offerings: 'Scrubs, Wraps, and Hydrotherapy',
     prices: [
       {
-        scrub: '90-minute Body Scrub',
+        scrub: '90-minute body Scrub',
         price: 120
       },
       {
-        wrap: '90-minute Body Wrap',
+        wrap: '90-minute body Wrap',
         price: 150
       },
       {
-        hydro: '90-minute Hydrotherapy',
+        hydro: '90-minute hydrotherapy',
         price: 200
       }
     ]
@@ -114,15 +114,15 @@ export const ServicesData = [
     offerings: 'Basic, Spa, and Gel packages',
     prices: [
       {
-        basicMani: 'Basic manicure',
+        basicMani: 'basic manicure',
         price: 25
       },
       {
-        spaMani: 'Spa manicure',
+        spaMani: 'spa manicure',
         price: 50
       },
       {
-        gelMani: 'Gel manicure',
+        gelMani: 'gel manicure',
         price: 55
       }
     ]

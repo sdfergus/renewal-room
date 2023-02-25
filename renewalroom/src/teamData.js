@@ -12,6 +12,10 @@ export const TeamData = {
         schedule: [
           'Mondays @ 9am',
           'Wednesdays @ 12pm'
+        ],
+        availability: [
+          'Monday @ 9am',
+          'Wednesday @ 12pm'
         ]
       },
       meditation: {
@@ -21,6 +25,11 @@ export const TeamData = {
           'Tuesdays @ 9am',
           'Thursdays @ 12pm',
           'Saturdays @ 3pm'
+        ],
+        availability: [
+          'Tuesday @ 9am',
+          'Thursday @ 12pm',
+          'Saturday @ 3pm'
         ]
       }
     },
@@ -44,6 +53,14 @@ export const TeamData = {
           'Thursdays @ 10pm',
           'Fridays @ 7pm',
           'Saturdays @ 12pm'
+        ],
+        availability: [
+          'Monday @ 7am',
+          'Tuesday @ 9pm',
+          'Wednesday @ 8pm',
+          'Thursday @ 10pm',
+          'Friday @ 7pm',
+          'Saturday @ 12pm'
         ]
       }
     },
@@ -67,6 +84,14 @@ export const TeamData = {
           'Thursdays @ 10am',
           'Fridays @ 7pm',
           'Saturdays @ 10am'
+        ],
+        availability: [
+          'Monday @ 9am',
+          'Tuesday @ 12pm',
+          'Wednesday @ 11am',
+          'Thursday @ 10am',
+          'Friday @ 7pm',
+          'Saturday @ 10am'
         ]
       },
       meditation: {
@@ -79,6 +104,14 @@ export const TeamData = {
           'Thursdays @ 3pm',
           'Fridays @ 3pm',
           'Saturdays @ 12pm'
+        ],
+        availability: [
+          'Monday @ 7am',
+          'Tuesday @ 3pm',
+          'Wednesday @ 7pm',
+          'Thursday @ 3pm',
+          'Friday @ 3pm',
+          'Saturday @ 12pm'
         ]
       }
     },
@@ -101,6 +134,13 @@ export const TeamData = {
           'Thursdays @ 11pm',
           'Fridays @ 6pm',
           'Saturdays @ 7pm'
+        ],
+        availability: [
+          'Tuesday @ 3pm',
+          'Wednesday @ 12pm',
+          'Thursday @ 11pm',
+          'Friday @ 6pm',
+          'Saturday @ 7pm'
         ]
       },
       waxes: {
@@ -113,6 +153,14 @@ export const TeamData = {
           'Thursdays @ 9am',
           'Fridays @ 12pm',
           'Saturdays @ 8am'
+        ],
+        availability: [
+          'Monday @ 12pm',
+          'Tuesday @ 9am',
+          'Wednesday @ 8am',
+          'Thursday @ 9am',
+          'Friday @ 12pm',
+          'Saturday @ 8am'
         ]
       }
     },
@@ -136,6 +184,14 @@ export const TeamData = {
           'Thursdays @ 1pm',
           'Fridays @ 4pm',
           'Saturdays @ 9am'
+        ],
+        availability: [
+          'Monday @ 8am',
+          'Tuesday @ 12pm',
+          'Wednesday @ 6pm',
+          'Thursday @ 1pm',
+          'Friday @ 4pm',
+          'Saturday @ 9am'
         ]
       },
       meditation: {
@@ -148,6 +204,14 @@ export const TeamData = {
           'Thursdays @ 6pm',
           'Fridays @ 2pm',
           'Saturdays @ 12pm'
+        ],
+        availability: [
+          'Monday @ 12pm',
+          'Tuesday @ 4pm',
+          'Wednesday @ 8am',
+          'Thursday @ 6pm',
+          'Friday @ 2pm',
+          'Saturday @ 12pm'
         ]
       }
     },
@@ -171,6 +235,14 @@ export const TeamData = {
           'Thursdays @ 12pm',
           'Fridays @ 2pm',
           'Saturdays @ 10am'
+        ],
+        availability: [
+          'Monday @ 8am',
+          'Tuesday @ 7pm',
+          'Wednesday @ 3pm',
+          'Thursday @ 12pm',
+          'Friday @ 2pm',
+          'Saturday @ 10am'
         ]
       },
       waxes: {
@@ -183,6 +255,14 @@ export const TeamData = {
           'Thursdays @ 1pm',
           'Fridays @ 9am',
           'Saturdays @ 8am'
+        ],
+        availability: [
+          'Monday @ 10am',
+          'Tuesday @ 3pm',
+          'Wednesday @ 12pm',
+          'Thursday @ 1pm',
+          'Friday @ 9am',
+          'Saturday @ 8am'
         ]
       }
     },
@@ -206,6 +286,14 @@ export const TeamData = {
           'Thursdays @ 1pm',
           'Fridays @ 8am',
           'Saturdays @ 9am'
+        ],
+        availability: [
+          'Monday @ 7am',
+          'Tuesday @ 4pm',
+          'Wednesday @ 8am',
+          'Thursday @ 1pm',
+          'Friday @ 8am',
+          'Saturday @ 9am'
         ]
       },
       maniPedi: {
@@ -218,6 +306,14 @@ export const TeamData = {
           'Thursdays @ 3pm',
           'Fridays @ 10am',
           'Saturdays @ 12pm'
+        ],
+        availability: [
+          'Monday @ 9am',
+          'Tuesday @ 12pm',
+          'Wednesday @ 10am',
+          'Thursday @ 3pm',
+          'Friday @ 10am',
+          'Saturday @ 12pm'
         ]
       }
     },
