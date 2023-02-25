@@ -3,11 +3,11 @@ import { ListGroup, ListGroupItem } from "reactstrap";
 import "./App.css";
 
 function Team( props ) {
-  console.log( 'LIST IN TEAM: ', Object.keys( props.teamList ).map( ( member, id ) => ( Object.values( props.teamList[ member ].services )[ 0 ].name ) ) );
+  // console.log( 'LIST IN TEAM: ', Object.keys( props.teamList ).map( ( member, id ) => ( Object.values( props.teamList[ member ].services )[ 0 ].name ) ) );
   return (
     <div className="Team-list p-5 ">
-      <h1 className="text-center mb-2">We're happy to serve you!</h1>
-      <p className="container mb-2">At The Renewal Room, we pride ourselves on having a team of highly trained and experienced professionals who are dedicated to providing you with the best possible spa experience. Our team consists of skilled therapists who are passionate about what they do and committed to helping you achieve the ultimate in relaxation and rejuvenation.
+      <h1 className="text-center mb-2 text-white">We're happy to serve you!</h1>
+      <p className="container mb-2 text-white">At The Renewal Room, we pride ourselves on having a team of highly trained and experienced professionals who are dedicated to providing you with the best possible spa experience. Our team consists of skilled therapists who are passionate about what they do and committed to helping you achieve the ultimate in relaxation and rejuvenation.
         <br />
         <br />
         Each member of our team has undergone extensive training and has years of experience in their field, ensuring that you receive the highest level of service and attention. From our expert massage therapists to our skilled estheticians, we have assembled a team of professionals who are dedicated to helping you find your inner peace and achieve a renewed sense of well-being.
