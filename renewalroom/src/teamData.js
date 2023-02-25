@@ -95,8 +95,7 @@ export const TeamData = {
       facials: {
         name: 'Facials',
         desc: {},
-        schedule: [
-          'Mondays @ 8am',
+        schedule: [ 'Mondays @ 8am',
           'Tuesdays @ 3pm',
           'Wednesdays @ 12pm',
           'Thursdays @ 11pm',
