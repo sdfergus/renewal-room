@@ -11,9 +11,10 @@ import DisplayBody from "./DisplayBody";
 import DisplayFooter from "./DisplayFooter";
 import Team from "./team";
 import Contact from "./contact";
+import Facials from "./facials";
 
 function Nav( props ) {
-  console.log( 'CartTotal: ', props.cartTotal );
+  // console.log( 'CartTotal: ', props.cartTotal );
   return (
     <Router>
       <nav className='Spa-nav border-bottom'>
@@ -108,6 +109,16 @@ function Nav( props ) {
           path="/contact"
           element={
             <Contact />
+          }
+        />
+
+        <Route
+          path="/facials"
+          element={
+            <Facials
+              handleFacialsFilter={props.handleFacialsFilter}
+              servicesList={props.servicesList}
+            />
           }
         />
 

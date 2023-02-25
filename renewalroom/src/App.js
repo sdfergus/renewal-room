@@ -36,12 +36,34 @@ class App extends Component {
     return cartTotal;
   }
 
+  handleFacialsFilter = () => {
+    const currList = this.state.TeamList;
+
+    const facialsTeam = Object.entries( currList ).reduce( ( filtered, member ) => {
+      if ( Object.keys( member[ 1 ].services ).includes( 'facials' ) ) {
+        filtered.push( member );
+      }
+      return filtered;
+    }, [] );
+    return facialsTeam
+  }
+
   render() {
+
+    // console.log( 'Filter function: ', this.handleFacialsFilter() );
+
+    // console.log( 'LIST IN APP.js: ', Object.entries( this.state.TeamList ).forEach( ( member ) => {
+    //   // console.log( Object.keys( member[ 1 ].services ) )
+    //   if ( Object.keys( member[ 1 ].services ).includes( 'massages' ) ) {
+    //     console.log( member );
+    //   }
+    // } ) );
+
     return (
       <div>
         <Nav
           teamList={this.state.TeamList}
-          serviceItems={this.state.ServicesList}
+          servicesList={this.state.ServicesList}
           // addItem={this.handleAddedItem}
           // removeItem={this.handleRemovedItem}
           displayCartItems={this.handleCartDisplay()}
@@ -50,6 +72,7 @@ class App extends Component {
           selectOption={this.state.selectOption}
           scroll={this.scroll}
           ctaRef={this.ctaRef}
+          handleFacialsFilter={this.handleFacialsFilter()}
         />
       </div>
     );
