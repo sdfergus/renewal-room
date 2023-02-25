@@ -215,7 +215,8 @@ header {
   margin-top: 20px;
 }
 
-.hero-text button {
+.hero-text button,
+.Contact-section form button {
   background-color: #f7cc70;
   padding: 10px 50px;
   font-weight: 700;
@@ -223,7 +224,8 @@ header {
 }
 
 .hero-text button:hover,
-#footer-btn:hover {
+#footer-btn:hover,
+.Contact-section form button:hover {
   border: 2px solid #f7cc70;
   color: #fff;
 }
@@ -296,4 +298,21 @@ footer .row {
 
 .specialty {
   color: tomato;
+}
+
+.reviews {
+  font-weight: light;
+  color: slategray;
+}
+
+/* ******************** CONTACT.js *************** */
+.Contact-section {
+  /* background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/People/12-col/img%20(97).jpg'); */
+  background: no-repeat #f7cc70 url(/public/images/hero-img.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.Contact-section form button:hover {
+  color: #261b14;
 }

@@ -10,6 +10,7 @@ import DisplayHero from "./DisplayHero";
 import DisplayBody from "./DisplayBody";
 import DisplayFooter from "./DisplayFooter";
 import Team from "./team";
+import Contact from "./contact";
 
 function Nav( props ) {
   console.log( 'CartTotal: ', props.cartTotal );
@@ -100,6 +101,13 @@ function Nav( props ) {
             <Team
               teamList={props.teamList}
             />
+          }
+        />
+
+        <Route
+          path="/contact"
+          element={
+            <Contact />
           }
         />
 
