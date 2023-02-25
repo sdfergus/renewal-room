@@ -44,7 +44,7 @@ function Team( props ) {
                   Rating: {props.teamList[ member ].ratings}
                   <br />
                   <br />
-                  <em>
+                  <em className="reviews">
                     {props.teamList[ member ].reviews[ 0 ]}
                   </em>
                   <br />
