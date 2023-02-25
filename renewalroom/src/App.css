@@ -142,7 +142,9 @@ html {
 }
 
 .Nav-links:hover {
-  color: #f7cc70 !important;
+  /* color: #f7cc70 !important; */
+  /* color: #585931 !important; */
+  color: goldenrod !important;
 }
 
 .Nav-links h6 {
@@ -183,7 +185,8 @@ header {
 }
 
 .Hero-img {
-  background: no-repeat #f7cc70 url(/public/images/hero-img.jpg);
+  /* background: no-repeat #f7cc70 url(/public/images/hero-img.jpg); */
+  background: no-repeat #585931 url(/public/images/hero-img.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 3em;
@@ -248,33 +251,12 @@ body .container .row .col-sm img {
   height: 287px;
 }
 
-/* ******************** FOOTER *************** */
-section .info-content {
-  background-color: #a6998f;
-}
-
-footer .copyright {
-  background-color: #261b14;
-}
-
-footer .row {
-  display: flex;
-  text-align: left;
-}
-
-#footer-btn {
-  background-color: #f7cc70;
-  border: 2px solid transparent;
-  color: #000;
-}
-
-#footer-btn:hover {
-  background-color: transparent;
-}
-
 /* ******************** TEAM.js *************** */
 .Team-list {
-  background-color: #f7cc70;
+  /* background-color: #f7cc70; */
+  /* background-color: #a6998f; */
+  background-color: #585931;
+  /* background-color: #826430; */
 }
 
 .Team-list .List-items {
@@ -298,6 +280,7 @@ footer .row {
 
 .specialty {
   color: tomato;
+  /* color: goldenrod; */
 }
 
 .reviews {
@@ -307,12 +290,36 @@ footer .row {
 
 /* ******************** CONTACT.js *************** */
 .Contact-section {
-  /* background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/People/12-col/img%20(97).jpg'); */
   background: no-repeat #f7cc70 url(/public/images/hero-img.jpg);
   background-size: cover;
   background-position: center center;
+  /* background-color: #a6998f; */
 }
 
 .Contact-section form button:hover {
   color: #261b14;
+}
+
+/* ******************** FOOTER *************** */
+section .info-content {
+  background-color: #a6998f;
+}
+
+footer .copyright {
+  background-color: #261b14;
+}
+
+footer .row {
+  display: flex;
+  text-align: left;
+}
+
+#footer-btn {
+  background-color: #f7cc70;
+  border: 2px solid transparent;
+  color: #000;
+}
+
+#footer-btn:hover {
+  background-color: transparent;
 }
