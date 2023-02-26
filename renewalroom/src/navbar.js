@@ -6,6 +6,7 @@ import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import DisplayServices from './displayServices';
 import Cart from './cart';
 import FbLogin from "./fbLogin";
+import Register from "./register";
 import DisplayHero from "./DisplayHero";
 import DisplayBody from "./DisplayBody";
 import DisplayFooter from "./DisplayFooter";
@@ -125,6 +126,13 @@ function Nav( props ) {
           path="/login"
           element={
             <FbLogin />
+          }
+        />
+
+        <Route
+          path="/register"
+          element={
+            <Register />
           }
         />
 

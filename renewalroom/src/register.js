@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGoogle, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
 // import Nav from './navbar';
 
-function FbLogin() {
-  const [ login, setLogin ] = useState( false ); //set up login
+function Register() {
+  const [ register, setRegister ] = useState( false ); //set up register
   const [ data, setData ] = useState( {} ); //set up fb data
   const [ picture, setPicture ] = useState( '' ); //set up fb profile image
 
@@ -17,32 +17,32 @@ function FbLogin() {
     setData( response );
     setPicture( response.picture.data.url );
     if ( response.accessToken ) {
-      setLogin( true );
+      setRegister( true );
     } else {
-      setLogin( false );
+      setRegister( false );
     }
   }
 
   return (
     <div className='container Login-section m-auto my-5 py-5'>
       <Card style={{ width: '800px' }} className='mx-auto mt-5 pb-5'>
-        {!login &&
+        {!register &&
           <Card.Header className='mb-4'>
-            <h1>Log In</h1>
+            <h1>Register</h1>
           </Card.Header>
         }
 
-        {login &&
+        {register &&
           <Card.Header className='mb-4'>
             <h1>Check Out</h1>
           </Card.Header>
         }
         <Card.Body>
           <Card.Text>
-            {!login &&
+            {!register &&
               <React.Fragment>
-                {/* Login Form */}
-                <LoginForm />
+                {/* Registration Form */}
+                <RegistrationForm />
                 {/* FB Login Button */}
                 <FacebookLogin
                   appId='1401222237082306'
@@ -55,7 +55,7 @@ function FbLogin() {
               </React.Fragment>
             }
 
-            {login &&
+            {register &&
               <CheckOut fbpic={picture} fbdata={data} />
             }
           </Card.Text>
@@ -65,7 +65,7 @@ function FbLogin() {
   )
 }
 
-function LoginForm() {
+function RegistrationForm() {
   return (
     <form className="" action="">
       <div className="row d-flex justify-content-center">
@@ -73,10 +73,17 @@ function LoginForm() {
           {/* <h1 className="text-center font-weight-bold mt-3 mb-5">Log In</h1> */}
           <div className="card w-75 m-auto">
             <div className="card-body px-4">
-              <label htmlFor="login" className="my-2">Please login to your account</label>
+              <label htmlFor="register" className="my-2">Create an account with us today</label>
               {/* <!-- Email --> */}
               <div className="md-form md-outline my-3">
-                <input type="text" id="email" className="form-control" placeholder="Username or Email" />
+                <input type="text" id="name" className="form-control" placeholder="Name" />
+              </div>
+              <div className="md-form md-outline my-3">
+                <input type="text" id="username" className="form-control" placeholder="Username" />
+              </div>
+              {/* <!-- Email --> */}
+              <div className="md-form md-outline my-3">
+                <input type="text" id="email" className="form-control" placeholder="Email" />
               </div>
               {/* <!-- Password --> */}
               <div className="md-form md-outline my-3">
@@ -99,11 +106,11 @@ function LoginForm() {
                 </div>
               </div>
 
-              <button type="submit" className="btn rounded-pill button-cta mb-4">Log In</button>
+              <button type="submit" className="btn rounded-pill button-cta mb-4">Create Account</button>
             </div>
             {/* <!-- Register buttons --> */}
             <div className="text-center mb-4">
-              <p>Not a member? <a href="/register">Register</a></p>
+              <p>Already a member? <a href='/login'>Login</a></p>
               <p>or sign up with:</p>
               {/* <button type="button" className="btn btn-link btn-floating mx-1">
                 <FontAwesomeIcon icon={faFacebook} />
@@ -155,4 +162,4 @@ function CheckOut( { fbpic, fbdata } ) {
   )
 }
 
-export default FbLogin;
+export default Register;

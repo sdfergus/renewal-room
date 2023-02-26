@@ -246,7 +246,7 @@ header {
 .Contact-section form button:hover,
 .Facials-list button:hover,
 .Cart-items a:hover,
-.Login-section form button.button-cta :hover {
+.Login-section form button.button-cta:hover {
   border: 2px solid #f7cc70;
   color: #fff;
 }
