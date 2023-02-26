@@ -1,7 +1,8 @@
 import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
-import "./App.css";
 import { Link } from "react-router-dom";
+// import FacebookLogin from 'react-facebook-login';
+import "./App.css";
 
 function Cart( props ) {
   // console.log( 'Cart Bookings in Cart.js: ', props.cartBookings.map( ( booking ) => (
@@ -9,6 +10,21 @@ function Cart( props ) {
   // ) ) );
 
   // console.log( 'BOOKINGS in Cart.js: ', props.cartBookings[ 0 ][ 1 ].bookings );
+
+  // const [ login, setLogin ] = useState( false ); //set up login
+  // const [ data, setData ] = useState( {} ); //set up fb data
+  // const [ picture, setPicture ] = useState( '' ); //set up fb profile img
+
+  // const fbResponse = ( response ) => {
+  //   console.log( response );
+  //   setData( response );
+  //   setPicture( response.picture.data.url );
+  //   if ( response.accessToken ) {
+  //     setLogin( true );
+  //   } else {
+  //     setLogin( false );
+  //   }
+  // }
 
   return (
     <div className="Cart-items p-5 mx-5 my-2">

@@ -12,7 +12,6 @@ import DisplayFooter from "./DisplayFooter";
 import Team from "./team";
 import Contact from "./contact";
 import Facials from "./facials";
-import Login from "./Login";
 
 function Nav( props ) {
 
@@ -52,6 +51,12 @@ function Nav( props ) {
           <div className="Nav-right">
             <li>
               <Link to="/login" className="Nav-links">
+                {/* (props.fbpic || props.fbdata) ?
+                <span className='Cart-section'>
+                  <img src={props.fbpic} alt={props.fbdata.name} />
+                  <span className="Cart-text"><h6>Welcome {props.fbdata.name}</h6></span>
+                </span>
+                : */}
                 <span className='Cart-section'>
                   <FontAwesomeIcon
                     icon={faUser}
@@ -119,7 +124,7 @@ function Nav( props ) {
         <Route
           path="/login"
           element={
-            <Login />
+            <FbLogin />
           }
         />
 

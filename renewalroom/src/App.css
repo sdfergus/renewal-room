@@ -92,6 +92,7 @@ html {
 }
 
 .Nav-center h6,
+.Nav-right h6,
 .Cart-text {
   font-weight: 400;
 }
@@ -170,9 +171,9 @@ html {
   padding-left: 30px !important;
 }
 
-.card-text form {
+/* .card-text form {
   width: 250px;
-}
+} */
 
 /* sortPrice.js */
 .Sort-div {

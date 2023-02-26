@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import { Card } from 'react-bootstrap';
 import './App.css';
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGoogle, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
+// import Nav from './navbar';
 
 function FbLogin() {
   const [ login, setLogin ] = useState( false ); //set up login
@@ -20,16 +24,16 @@ function FbLogin() {
   }
 
   return (
-    <div className='container'>
-      <Card style={{ width: '800px' }} className='mx-auto mt-5'>
+    <div className='container Login-section m-auto my-5 py-5'>
+      <Card style={{ width: '800px' }} className='mx-auto mt-5 pb-5'>
         {!login &&
-          <Card.Header className='pb-4'>
-            <h1>Sign In</h1>
+          <Card.Header className='mb-4'>
+            <h1>Log In</h1>
           </Card.Header>
         }
 
         {login &&
-          <Card.Header className='pb-4'>
+          <Card.Header className='mb-4'>
             <h1>Check Out</h1>
           </Card.Header>
         }
@@ -37,7 +41,6 @@ function FbLogin() {
           <Card.Text>
             {!login &&
               <React.Fragment>
-                <h3>Please login using one of the following:</h3>
                 {/* Login Form */}
                 <LoginForm />
                 {/* FB Login Button */}
@@ -64,12 +67,64 @@ function FbLogin() {
 
 function LoginForm() {
   return (
-    <form action="" className='border mt-3 mb-5 p-3 bg-white'>
-      <label className='m-2'>Name:</label>
-      <input type="text" name='name' placeholder='Your Name' />
-      <label className='m-2'>Email:</label>
-      <input type="text" name='email' placeholder='Your Email' />
-      <input type="submit" value='Login' className='btn bg-success text-white my-3' />
+    <form className="" action="">
+      <div className="row d-flex justify-content-center">
+        <div className="">
+          {/* <h1 className="text-center font-weight-bold mt-3 mb-5">Log In</h1> */}
+          <div className="card w-75 m-auto">
+            <div className="card-body px-4">
+              <label htmlFor="login" className="my-2">Please login to your account</label>
+              {/* <!-- Email --> */}
+              <div className="md-form md-outline my-3">
+                <input type="text" id="email" className="form-control" placeholder="Your email" />
+              </div>
+              {/* <!-- Password --> */}
+              <div className="md-form md-outline my-3">
+                <input type="text" id="password" className="form-control" placeholder="Your password" />
+              </div>
+
+              {/* <!-- 2 column grid layout for inline styling --> */}
+              <div className="row mb-4">
+                <div className="col d-flex justify-content-center">
+                  {/* <!-- Checkbox --> */}
+                  <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="form2Example31" defaultChecked />
+                    <label className="form-check-label" htmlFor="form2Example31"> Remember me </label>
+                  </div>
+                </div>
+
+                <div className="col">
+                  {/* <!-- Simple link --> */}
+                  <a href="#!">Forgot password?</a>
+                </div>
+              </div>
+
+              <button type="submit" className="btn rounded-pill button-cta mb-4">Log In</button>
+            </div>
+            {/* <!-- Register buttons --> */}
+            <div className="text-center mb-4">
+              <p>Not a member? <a href="#!">Register</a></p>
+              <p>or sign up with:</p>
+              {/* <button type="button" className="btn btn-link btn-floating mx-1">
+                <FontAwesomeIcon icon={faFacebook} />
+              </button> */}
+
+              <button type="button" className="btn btn-link btn-floating mx-1 fa-disabled">
+                <FontAwesomeIcon icon={faGoogle} />
+              </button>
+
+              <button type="button" className="btn btn-link btn-floating mx-1 fa-disabled">
+                <FontAwesomeIcon icon={faTwitter} />
+              </button>
+
+              <button type="button" className="btn btn-link btn-floating mx-1 fa-disabled">
+                <FontAwesomeIcon icon={faGithub} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </form>
   )
 }
@@ -81,7 +136,21 @@ function CheckOut( { fbpic, fbdata } ) {
       <h3 className='d-inline text-success mx-2'>
         Welcome back {fbdata.name}!
       </h3>
-      <p className='my-5'>Time to check out?</p>
+      <h4 className='my-5'>Ready to check out?</h4>
+      <div className="">
+        <Link
+          to="/"
+          className="btn btn-success px-3 mx-4"
+        >
+          Continue booking
+        </Link>
+        <Link
+          to="/cart"
+          className="btn btn-outline-success disabled"
+        >
+          Check out
+        </Link>
+      </div>
     </React.Fragment>
   )
 }
