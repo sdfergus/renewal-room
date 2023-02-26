@@ -62,19 +62,27 @@ export const ServicesData = [
     offerings: 'Basic, Deep Cleaning, Anti-aging, and Revitalizing',
     prices: [
       {
-        basic: '90-minute basic facial',
+        id: 1,
+        name: 'basic',
+        type: '90-minute basic facial',
         price: 100
       },
       {
-        deepClean: '90-minute deep cleaning facial',
+        id: 2,
+        name: 'deepClean',
+        type: '90-minute deep cleaning facial',
         price: 130
       },
       {
-        antiAging: '90-minute anti-aging facial',
+        id: 3,
+        name: 'antiAging',
+        type: '90-minute anti-aging facial',
         price: 200
       },
       {
-        revitalizing: '90-minute revitalizing facial',
+        id: 4,
+        name: 'revitalizing',
+        type: '90-minute revitalizing facial',
         price: 150
       }
     ]

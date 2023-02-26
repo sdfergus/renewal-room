@@ -21,11 +21,17 @@ class App extends Component {
   }
 
   handleCartDisplay = () => {
-    const currList = this.state.ServicesList;
-    const cartItems = currList.filter( ( items ) => {
-      return items.quantity > 0
-    } )
-    return cartItems;
+
+    const currTeamList = this.state.TeamList;
+    const filteredBookings = Object.entries( currTeamList ).filter( ( team ) => {
+      if ( team[ 1 ].bookings.length > 0 ) {
+        return ( Object.entries( team[ 1 ] ) );
+      }
+      return false;
+    } );
+
+    // console.log( 'handleCartDisplay filtering: ', filteredBookings[ 0 ] );
+    return filteredBookings;
   }
 
   handleCartTotal = () => {
@@ -34,6 +40,19 @@ class App extends Component {
       return prevVal + currVal.quantity;
     }, 0 )
     return cartTotal;
+  }
+
+  handleBookedItem = ( booking ) => {
+    const currTeamList = this.state.TeamList;
+    const teamMember = booking.name;
+    const bookingsArr = currTeamList[ teamMember ].bookings;
+    bookingsArr.push( booking );
+
+    console.log( 'NEW LIST in handleBookedItem: ', currTeamList );
+    console.log( 'New Bookings Array: ', bookingsArr );
+    // this.handleCartDisplay();
+    this.setState( bookingsArr );
+    // return bookingsArr;
   }
 
   handleFacialsFilter = () => {
@@ -49,32 +68,25 @@ class App extends Component {
   }
 
   render() {
-
-    // console.log( 'Filter function: ', this.handleFacialsFilter() );
-
-    // console.log( 'LIST IN APP.js: ', Object.entries( this.state.TeamList ).forEach( ( member ) => {
-    //   // console.log( Object.keys( member[ 1 ].services ) )
-    //   if ( Object.keys( member[ 1 ].services ).includes( 'massages' ) ) {
-    //     console.log( member );
-    //   }
-    // } ) );
-
+    // console.log( 'TEAM LIST in App.js render:', this.state.TeamList );
+    console.log( 'FILTERED BOOKINGS IN App.js', this.handleCartDisplay() );
     return (
-      <div>
-        <Nav
-          teamList={this.state.TeamList}
-          servicesList={this.state.ServicesList}
-          // addItem={this.handleAddedItem}
-          // removeItem={this.handleRemovedItem}
-          displayCartItems={this.handleCartDisplay()}
-          cartTotal={this.handleCartTotal()}
-          // handleSelect={this.handleSelect}
-          selectOption={this.state.selectOption}
-          scroll={this.scroll}
-          ctaRef={this.ctaRef}
-          handleFacialsFilter={this.handleFacialsFilter()}
-        />
-      </div>
+
+      <Nav
+        teamList={this.state.TeamList}
+        servicesList={this.state.ServicesList}
+        // addItem={this.handleAddedItem}
+        // removeItem={this.handleRemovedItem}
+        displayCartBookings={this.handleCartDisplay()}
+        cartTotal={this.handleCartTotal()}
+        // handleSelect={this.handleSelect}
+        selectOption={this.state.selectOption}
+        scroll={this.scroll}
+        ctaRef={this.ctaRef}
+        handleFacialsFilter={this.handleFacialsFilter()}
+        handleBookedItem={this.handleBookedItem}
+      />
+
     );
   }
 }

@@ -33,6 +33,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "5/5",
     reviews: [ "Her Manicures are the absolute best! 10/10 would recommend! - Stacy A", "Let's talk about her meditation sessions! I sleep like a baby every time! - Jacob M" ]
   },
@@ -64,6 +65,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "4.8/5",
     reviews: [ "Brian is amazing! His deep tissue technique is incredible and left me feeling relaxed and rejuvenated. Highly recommend him! - Sam T." ]
   },
@@ -115,6 +117,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "4.5/5",
     reviews: [ "John is an amazing yoga and meditation instructor! He creates a calming environment and his techniques are truly holistic. Highly recommend him to anyone looking to improve their overall well-being. - Beth C." ]
   },
@@ -164,6 +167,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "5/5",
     reviews: [ "Kristen is amazing! Her facials are so relaxing and leave my skin feeling incredible. And her waxing technique is virtually painless - she's a true pro. Highly recommend her to anyone looking for an esthetician who cares about her clients and delivers fantastic results. - Paula M." ]
   },
@@ -215,6 +219,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "5/5",
     reviews: [ "Matthew is amazing! His massages are so relaxing and he has a unique approach that left me feeling completely rejuvenated. And his meditation sessions are truly transformative - I felt more centered and peaceful than ever before. Highly recommend him to anyone looking to improve their overall well-being - Dave N." ]
   },
@@ -266,6 +271,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "4.9/5",
     reviews: [ "I had an amazing experience with Nicole! She is incredibly knowledgeable and talented, and I felt completely comfortable with her. Her attention to detail is unparalleled, and I left feeling refreshed and confident. Highly recommend her for anyone looking for a top-notch esthetician! - Kate M." ]
   },
@@ -317,6 +323,7 @@ export const TeamData = {
         ]
       }
     },
+    bookings: [],
     ratings: "4/5",
     reviews: [ "I had an amazing yoga session with Rachael! She was so attentive to my needs and really helped me improve my form. Plus, her energy was so calming and positive - I left feeling refreshed and energized. And when I went to get a manicure and pedicure with her, she was just as amazing. She pays close attention to detail and makes sure everything is perfect. I can't recommend Rachael enough! - Ruth S." ]
   }

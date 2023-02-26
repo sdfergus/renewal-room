@@ -12,9 +12,12 @@ import DisplayFooter from "./DisplayFooter";
 import Team from "./team";
 import Contact from "./contact";
 import Facials from "./facials";
+import Login from "./Login";
 
 function Nav( props ) {
-  // console.log( 'CartTotal: ', props.cartTotal );
+
+  console.log( 'Cart Bookings in Nav', props.displayCartBookings );
+
   return (
     <Router>
       <nav className='Spa-nav border-bottom'>
@@ -92,7 +95,8 @@ function Nav( props ) {
           path="/cart"
           element={
             <Cart
-              cartItems={props.displayCartItems}
+              cartBookings={props.displayCartBookings}
+              ctaRef={props.ctaRef}
             />
           } />
 
@@ -113,11 +117,19 @@ function Nav( props ) {
         />
 
         <Route
+          path="/login"
+          element={
+            <Login />
+          }
+        />
+
+        <Route
           path="/facials"
           element={
             <Facials
               handleFacialsFilter={props.handleFacialsFilter}
               servicesList={props.servicesList}
+              handleBookedItem={props.handleBookedItem}
             />
           }
         />
