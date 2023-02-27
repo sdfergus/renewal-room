@@ -2,7 +2,7 @@ import './App.css';
 import React, { Component } from "react";
 import { ServicesData } from './services';
 import Nav from './navbar';
-import { TeamData } from './teamData';
+import { TeamData } from './teamData2';
 
 class App extends Component {
 

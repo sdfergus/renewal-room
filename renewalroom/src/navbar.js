@@ -13,6 +13,7 @@ import DisplayFooter from "./DisplayFooter";
 import Team from "./team";
 import Contact from "./contact";
 import Facials from "./facials";
+import About from "./about";
 
 function Nav( props ) {
 
@@ -98,13 +99,11 @@ function Nav( props ) {
         />
 
         <Route
-          path="/cart"
+          path="/about"
           element={
-            <Cart
-              cartBookings={props.displayCartBookings}
-              ctaRef={props.ctaRef}
-            />
-          } />
+            <About />
+          }
+        />
 
         <Route
           path="/team"
@@ -135,6 +134,15 @@ function Nav( props ) {
             <Register />
           }
         />
+
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cartBookings={props.displayCartBookings}
+              ctaRef={props.ctaRef}
+            />
+          } />
 
         <Route
           path="/facials"

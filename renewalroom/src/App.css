@@ -341,7 +341,8 @@ body .container .row .col-sm img {
 
 /* ******************** CONTACT.js *************** */
 .Contact-section,
-.Login-section {
+.Login-section,
+.About-section {
   background: no-repeat #f7cc70 url(/public/images/hero-img.jpg);
   background-size: cover;
   background-position: center center;
