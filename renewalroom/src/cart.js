@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 
 function Cart( props ) {
-  // console.log( 'Cart Bookings in CART: ', props.cartBookings.map( ( arr ) => ( console.log( arr[ 1 ].bookings.map( ( booking ) => ( console.log( booking ) ) ) ) ) ) );
-
-  console.log( 'Cart Bookings in CART: ', props.cartBookings.map( ( arr ) => ( console.log( arr[ 1 ] ) ) ) );
+  // console.log( 'Cart Bookings in CART: ', props.cartBookings.map( ( arr ) => ( console.log( arr[ 1 ] ) ) ) );
 
   return (
     <div className="Cart-items p-5 mx-5 my-2">
