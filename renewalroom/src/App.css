@@ -356,6 +356,17 @@ body .container .row .col-sm img {
   color: #261b14;
 }
 
+/* ******************** CART.js *************** */
+.Cart-items a.checkout-CTA {
+  background-color: transparent;
+  border: 2px solid #f7cc70;
+}
+
+.Cart-items a.checkout-CTA:hover {
+  background-color: #f7cc70;
+  /* color: white; */
+}
+
 /* ******************** FACIALS.js *************** */
 .Facials-list button {
 }

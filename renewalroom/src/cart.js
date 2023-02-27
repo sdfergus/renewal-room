@@ -72,12 +72,22 @@ function Cart( props ) {
               Continue booking
             </Link>
           </React.Fragment>
-          : <Link
-            to='/fbLogin'
-            className="btn mt-4"
-          >
-            Check Out
-          </Link>
+          :
+          [
+            <Link
+              to="/"
+              className="btn mt-4 px-3"
+            >
+              Continue Booking
+            </Link>
+            ,
+            <Link
+              to='/fbLogin'
+              className="btn mt-4 mx-3 checkout-CTA"
+            >
+              Check Out
+            </Link>
+          ]
       }
     </div>
 

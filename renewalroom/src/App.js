@@ -35,9 +35,10 @@ class App extends Component {
   }
 
   handleCartTotal = () => {
-    const currList = this.state.ServicesList;
+    const currList = this.state.TeamList;
+
     const cartTotal = currList.reduce( ( prevVal, currVal ) => {
-      return prevVal + currVal.quantity;
+      return prevVal + currVal.bookings.length;
     }, 0 )
     return cartTotal;
   }
@@ -48,8 +49,9 @@ class App extends Component {
     const bookingsArr = currTeamList[ teamMember ].bookings;
     bookingsArr.push( booking );
 
-    console.log( 'NEW LIST in handleBookedItem: ', currTeamList );
-    console.log( 'New Bookings Array: ', bookingsArr );
+    // console.log( 'NEW LIST in handleBookedItem: ', currTeamList );
+    // console.log( 'New Bookings Array: ', bookingsArr );
+
     // this.handleCartDisplay();
     this.setState( bookingsArr );
     // return bookingsArr;
@@ -69,7 +71,10 @@ class App extends Component {
 
   render() {
     // console.log( 'TEAM LIST in App.js render:', this.state.TeamList );
-    console.log( 'FILTERED BOOKINGS IN App.js', this.handleCartDisplay() );
+
+    // console.log( 'FILTERED BOOKINGS IN App.js', this.handleCartDisplay() );
+    console.log( this.handleCartTotal() );
+
     return (
 
       <Nav
