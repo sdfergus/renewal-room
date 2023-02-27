@@ -11,13 +11,39 @@ class App extends Component {
     this.state = {
       selectOption: 'Normal',
       ServicesList: ServicesData,
-      TeamList: TeamData
+      TeamList: TeamData,
+      members: [],
+      isLoading: true
     }
 
     this.ctaRef = React.createRef();
   }
+
   scroll = ( ref ) => {
     ref.current.scrollIntoView( { behavior: 'smooth' } )
+  }
+
+  componentDidMount() {
+    this.setState( { isLoading: true } );
+
+    fetch( 'api/members' )
+      .then( response => response.json() )
+      .then( data => this.setState( { members: data, isLoading: false } ) );
+
+  }
+
+  removeMember = async ( id ) => {
+    await fetch( `/api/member/${ id }`, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    } )
+    console.log( 'Remove done!' );
+    //update inventory state minus removed item
+    let updatedMembers = [ ...this.state.members ].filter( i => i._id !== id );
+    this.setState( { members: updatedMembers } );
   }
 
   handleCartDisplay = () => {
@@ -29,8 +55,6 @@ class App extends Component {
       }
       return false;
     } );
-
-    // console.log( 'handleCartDisplay filtering: ', filteredBookings[ 0 ] );
     return filteredBookings;
   }
 
@@ -48,11 +72,6 @@ class App extends Component {
     const teamMember = booking.name;
     const bookingsArr = currTeamList[ teamMember ].bookings;
     bookingsArr.push( booking );
-
-    // console.log( 'NEW LIST in handleBookedItem: ', currTeamList );
-    // console.log( 'New Bookings Array: ', bookingsArr );
-
-    // this.handleCartDisplay();
     this.setState( bookingsArr );
     // return bookingsArr;
   }
@@ -70,14 +89,11 @@ class App extends Component {
   }
 
   render() {
-    // console.log( 'TEAM LIST in App.js render:', this.state.TeamList );
-
-    // console.log( 'FILTERED BOOKINGS IN App.js', this.handleCartDisplay() );
-
     return (
 
       <Nav
         teamList={this.state.TeamList}
+        members={this.state.members}
         servicesList={this.state.ServicesList}
         // addItem={this.handleAddedItem}
         // removeItem={this.handleRemovedItem}

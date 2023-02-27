@@ -110,6 +110,7 @@ function Nav( props ) {
           element={
             <Team
               teamList={props.teamList}
+              members={props.members}
             />
           }
         />

@@ -2,7 +2,7 @@ const express = require( 'express' );
 const app = express();
 const bodyParser = require( 'body-parser' );
 app.use( bodyParser.json() );
-require( './app/models/teamData.model.js' );
+require( './app/models/members.model.js' );
 require( './app/models/services.model.js' );
 
 //Configuring the database
@@ -24,7 +24,7 @@ mongoose.connection
   } )
 
 //Create the server and port
-require( './app/routes/teamData.router.js' )( app );
+require( './app/routes/members.router.js' )( app );
 require( './app/routes/services.router.js' )( app );
 
 //Create a Server

@@ -3,7 +3,7 @@ import { ListGroup, ListGroupItem } from "reactstrap";
 import "./App.css";
 
 function Team( props ) {
-  // console.log( 'LIST IN TEAM: ', Object.keys( props.teamList ).map( ( member, id ) => ( Object.values( props.teamList[ member ].services )[ 0 ].name ) ) );
+
   return (
     <div className="Team-list p-5 ">
       <h1 className="text-center mb-2 text-white">We're happy to serve you!</h1>
