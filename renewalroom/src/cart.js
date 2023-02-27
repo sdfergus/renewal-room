@@ -1,37 +1,48 @@
 import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
-// import FacebookLogin from 'react-facebook-login';
 import "./App.css";
 
 function Cart( props ) {
-  // console.log( 'Cart Bookings in Cart.js: ', props.cartBookings.map( ( booking ) => (
-  //   console.log( 'Bookings length: ', booking[ 1 ].bookings )
-  // ) ) );
+  // console.log( 'Cart Bookings in CART: ', props.cartBookings.map( ( arr ) => ( console.log( arr[ 1 ].bookings.map( ( booking ) => ( console.log( booking ) ) ) ) ) ) );
 
-  // console.log( 'BOOKINGS in Cart.js: ', props.cartBookings[ 0 ][ 1 ].bookings );
-
-  // const [ login, setLogin ] = useState( false ); //set up login
-  // const [ data, setData ] = useState( {} ); //set up fb data
-  // const [ picture, setPicture ] = useState( '' ); //set up fb profile img
-
-  // const fbResponse = ( response ) => {
-  //   console.log( response );
-  //   setData( response );
-  //   setPicture( response.picture.data.url );
-  //   if ( response.accessToken ) {
-  //     setLogin( true );
-  //   } else {
-  //     setLogin( false );
-  //   }
-  // }
+  console.log( 'Cart Bookings in CART: ', props.cartBookings.map( ( arr ) => ( console.log( arr[ 1 ] ) ) ) );
 
   return (
     <div className="Cart-items p-5 mx-5 my-2">
       <h2>Your Bookings</h2>
       <ListGroup className="w-75">
 
-        {props.cartBookings.map( ( booking ) => (
+        {props.cartBookings && props.cartBookings.map( ( arr ) => (
+          arr[ 1 ].bookings && arr[ 1 ].bookings.map( ( booking, index ) => (
+            <ListGroupItem
+              className='List-items py-3'
+              key={index}
+            >
+              <div className='Item-contents'>
+                <span>
+                  <img
+                    src={arr[ 1 ].img}
+                    alt={arr[ 1 ].alt}
+                    className='Item-img'
+                  />
+                  <div className='Item-name'>
+                    {arr[ 1 ].name}
+                  </div>
+                </span>
+                <span>
+                  <span className='fw-bold'>Service:</span> {booking.service}
+                  <br />
+                  <br />
+                  <span className='fw-bold'>When:</span> {booking.availability}
+                </span>
+              </div>
+            </ListGroupItem>
+          ) )
+        )
+        )}
+
+        {/* {props.cartBookings.map( ( booking ) => (
           <ListGroupItem
             className='List-items py-3'
             key={booking[ 1 ].id}
@@ -56,7 +67,7 @@ function Cart( props ) {
             </div>
           </ListGroupItem>
         )
-        )}
+        )} */}
 
 
       </ListGroup>

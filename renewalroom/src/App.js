@@ -73,7 +73,6 @@ class App extends Component {
     // console.log( 'TEAM LIST in App.js render:', this.state.TeamList );
 
     // console.log( 'FILTERED BOOKINGS IN App.js', this.handleCartDisplay() );
-    console.log( this.handleCartTotal() );
 
     return (
 
