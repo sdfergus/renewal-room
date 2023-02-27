@@ -357,6 +357,11 @@ body .container .row .col-sm img {
 }
 
 /* ******************** CART.js *************** */
+
+.Cart-items {
+  position: relative;
+}
+
 .Cart-items a.checkout-CTA {
   background-color: transparent;
   border: 2px solid #f7cc70;
@@ -365,6 +370,11 @@ body .container .row .col-sm img {
 .Cart-items a.checkout-CTA:hover {
   background-color: #f7cc70;
   /* color: white; */
+}
+
+.Cart-prices {
+  position: relative;
+  float: right;
 }
 
 /* ******************** FACIALS.js *************** */

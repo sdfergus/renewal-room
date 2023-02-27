@@ -1,6 +1,6 @@
 export const TeamData = [
   {
-    id: 'Allison',
+    id: 1,
     name: 'Allison',
     img: 'images/team/Allison.jpg',
     alt: 'Allison profile',
@@ -38,7 +38,7 @@ export const TeamData = [
     reviews: [ "Her Manicures are the absolute best! 10/10 would recommend! - Stacy A", "Let's talk about her meditation sessions! I sleep like a baby every time! - Jacob M" ]
   },
   {
-    id: 'Brian',
+    id: 2,
     name: 'Brian',
     img: 'images/team/Brian.jpg',
     alt: 'Brian profile',
@@ -70,7 +70,7 @@ export const TeamData = [
     reviews: [ "Brian is amazing! His deep tissue technique is incredible and left me feeling relaxed and rejuvenated. Highly recommend him! - Sam T." ]
   },
   {
-    id: 'John',
+    id: 3,
     name: 'John',
     img: 'images/team/John.jpg',
     alt: 'John profile',
@@ -122,7 +122,7 @@ export const TeamData = [
     reviews: [ "John is an amazing yoga and meditation instructor! He creates a calming environment and his techniques are truly holistic. Highly recommend him to anyone looking to improve their overall well-being. - Beth C." ]
   },
   {
-    id: 'Kristen',
+    id: 4,
     name: 'Kristen',
     img: 'images/team/Kristen.jpg',
     alt: 'Kristen profile',
@@ -172,7 +172,7 @@ export const TeamData = [
     reviews: [ "Kristen is amazing! Her facials are so relaxing and leave my skin feeling incredible. And her waxing technique is virtually painless - she's a true pro. Highly recommend her to anyone looking for an esthetician who cares about her clients and delivers fantastic results. - Paula M." ]
   },
   {
-    id: 'Matthew',
+    id: 5,
     name: 'Matthew',
     img: 'images/team/Matthew.jpg',
     alt: 'Matthew profile',
@@ -224,7 +224,7 @@ export const TeamData = [
     reviews: [ "Matthew is amazing! His massages are so relaxing and he has a unique approach that left me feeling completely rejuvenated. And his meditation sessions are truly transformative - I felt more centered and peaceful than ever before. Highly recommend him to anyone looking to improve their overall well-being - Dave N." ]
   },
   {
-    id: 'Nicole',
+    id: 6,
     name: 'Nicole',
     img: 'images/team/Nicole.jpg',
     alt: 'Nicole profile',
@@ -276,7 +276,7 @@ export const TeamData = [
     reviews: [ "I had an amazing experience with Nicole! She is incredibly knowledgeable and talented, and I felt completely comfortable with her. Her attention to detail is unparalleled, and I left feeling refreshed and confident. Highly recommend her for anyone looking for a top-notch esthetician! - Kate M." ]
   },
   {
-    id: 'Rachael',
+    id: 7,
     name: 'Rachael',
     img: 'images/team/Rachael.jpg',
     alt: 'Rachael profile',

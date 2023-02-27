@@ -19,6 +19,9 @@ function Cart( props ) {
               className='List-items py-3'
               key={index}
             >
+              <span className="Cart-prices">
+                Price: $
+              </span>
               <div className='Item-contents'>
                 <span>
                   <img
@@ -37,38 +40,11 @@ function Cart( props ) {
                   <span className='fw-bold'>When:</span> {booking.availability}
                 </span>
               </div>
+
             </ListGroupItem>
           ) )
         )
         )}
-
-        {/* {props.cartBookings.map( ( booking ) => (
-          <ListGroupItem
-            className='List-items py-3'
-            key={booking[ 1 ].id}
-          >
-            <div className='Item-contents'>
-              <span>
-                <img
-                  src={booking[ 1 ].img}
-                  alt={booking[ 1 ].alt}
-                  className='Item-img'
-                />
-                <div className='Item-name'>
-                  {booking[ 1 ].name}
-                </div>
-              </span>
-              <span>
-                <span className='fw-bold'>When:</span> {booking[ 1 ].bookings[ 0 ].availability}
-                <br />
-                <br />
-                <span className='fw-bold'>Service:</span> {booking[ 1 ].bookings[ 0 ].service}
-              </span>
-            </div>
-          </ListGroupItem>
-        )
-        )} */}
-
 
       </ListGroup>
 
@@ -85,16 +61,19 @@ function Cart( props ) {
           </React.Fragment>
           :
           [
+            <div className="w-75 list-group text-end py-2">
+              <h5>Sub Total: $</h5>
+            </div>,
             <Link
               to="/"
-              className="btn mt-4 px-3"
+              className="btn mt-1 px-3"
             >
               Continue Booking
             </Link>
             ,
             <Link
               to='/fbLogin'
-              className="btn mt-4 mx-3 checkout-CTA"
+              className="btn mt-1 mx-3 checkout-CTA"
             >
               Check Out
             </Link>
