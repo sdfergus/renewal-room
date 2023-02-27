@@ -4,8 +4,14 @@ const Services = mongoose.model( 'Services' );
 exports.createService = ( req, res ) => {
   const service = new Services( {
     id: req.body.id,
-    title: req.body.title,
-    author: req.body.author
+    service: req.body.service,
+    image: req.body.image,
+    alt: req.body.alt,
+    quantity: req.body.quantity,
+    price: req.body.price,
+    info: req.body.info,
+    offerings: req.body.offerings,
+    prices: req.body.prices
   } );
 
   //Save inventory in MongoDB
@@ -56,8 +62,14 @@ exports.updateService = ( req, res ) => {
   Services.findByIdAndUpdate( req.body._id,
     {
       id: req.body.id,
-      title: req.body.title,
-      author: req.body.author
+      service: req.body.service,
+      image: req.body.image,
+      alt: req.body.alt,
+      quantity: req.body.quantity,
+      price: req.body.price,
+      info: req.body.info,
+      offerings: req.body.offerings,
+      prices: req.body.prices
     },
     { new: false }
   ).select( '-__v' )

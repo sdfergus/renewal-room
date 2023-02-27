@@ -1,6 +1,6 @@
 const mongoose = require( 'mongoose' );
 
-const TeamDataSchema = new mongoose.Schema( {
+const MembersSchema = new mongoose.Schema( {
   id: Number,
   name: String,
   img: String,
@@ -12,4 +12,4 @@ const TeamDataSchema = new mongoose.Schema( {
   reviews: Array
 } );
 
-module.exports = mongoose.model( 'TeamData', TeamDataSchema );
+module.exports = mongoose.model( 'Members', MembersSchema );
